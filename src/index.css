@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@keyframes upDown {
+   0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes leftRight {
+   0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+}
+
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    transform: translate(25px)
+  } 
+  from {
+    opaciity: 1;
+    transform: translate(0)
+  }
+}
+
+.hero-content{
+  animation: fadeup 0.9s ease-out
+}
+
+@keyframes floatBlob {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-100px);
+  }
+}
+.float-blob {
+  animation: floatBlob 8s ease-in-out infinite;
+}
+
+@keyframes floatBlobReverse {
+  0%, 100% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(100px);
+  }
+}
+.float-blob-reverse {
+  animation: floatBlobReverse 10s ease-in-out infinite;
+}
