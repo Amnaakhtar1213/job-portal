@@ -2,6 +2,8 @@ import React from 'react'
 import Navbar from '../components/Navbar/Navbar'
 import SearchSection from '../components/SearchSection/SearchSection'
 import FeaturedJobs from '../components/FeaturedJobs/FeaturedJobs'
+import TopCompanies from '../components/TopCompanies/TopCompanies'
+import PopularCategories from '../components/PopularCategories/PopularCategories'
 
 const Home = () => {
   return (
@@ -25,6 +27,8 @@ const Home = () => {
 
       <Navbar />
       <FeaturedJobs />
+      <TopCompanies />
+      <PopularCategories />
     </div>
   )
 }
