@@ -21,7 +21,7 @@ and hiring talented people worldwide.</p>
      <CompanyCard />
      <CompanyCard />
      <CompanyCard />
-     <CompanyCard />
+    
     </div>
     </div>
     </div>

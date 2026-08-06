@@ -2,7 +2,7 @@ import React from 'react'
 
 const CompanyCard = () => {
   return (
-    <div className="hover:-translate-y-1 transition-all duration-300 flex flex-col items-center py-6 bg-orange-100 w-64 h-72 shadow-md hover:shadow-xl transition h-60 rounded-3xl p-4 mt-8">
+    <div className="hover:-translate-y-1 transition-all duration-300 flex flex-col items-center py-8 bg-orange-100 w-64 h-72 shadow-md hover:shadow-xl rounded-3xl mt-8">
    <i className="fa-brands fa-amazon text-4xl text-orange-400"></i>
    <h1 className="text-gray-900 text-xl font-semibold mt-2">Amazon</h1>
    <div className="mt-2 flex items-center flex-row gap-2">
@@ -11,7 +11,7 @@ const CompanyCard = () => {
    </div>
 <p className="text-gray-500 mt-4">120+ Open position</p>
  <div className="flex items-center justify-center mt-6">
-       <button className="group flex flex-row gap-4 items-center justify-center bg-orange-400 hover:bg-orange-500 text-white px-6 rounded-2xl py-1 mt-10 hover:-translate-y-1 transition transform duration-300 ease-in-out tracking-wide [text-shadow:1px_1px_3px_rgba(0,0,0,0.3)] animate-fadeIn"><span>Explore</span><i className="fa-solid fa-arrow-right group-hover:animate-[leftRight_2s_ease-in-out_infinite]"></i></button>
+       <button className="group flex flex-row gap-4 items-center justify-center bg-orange-400 hover:bg-orange-500 text-white px-6 rounded-2xl py-1 mt-2 hover:-translate-y-1 transition transform duration-300 ease-in-out tracking-wide [text-shadow:1px_1px_3px_rgba(0,0,0,0.3)] animate-fadeIn"><span>Explore</span><i className="fa-solid fa-arrow-right group-hover:animate-[leftRight_2s_ease-in-out_infinite]"></i></button>
 </div>
    
     

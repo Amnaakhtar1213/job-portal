@@ -4,11 +4,14 @@ import SearchSection from '../components/SearchSection/SearchSection'
 import FeaturedJobs from '../components/FeaturedJobs/FeaturedJobs'
 import TopCompanies from '../components/TopCompanies/TopCompanies'
 import PopularCategories from '../components/PopularCategories/PopularCategories'
+import WhyUs from '../components/WhyUs/WhyUs'
+import HowItWorks from '../components/HowItWorks/HowItWorks'
+import Testimonials from '../components/Testimonials/Testimonials'
 
 const Home = () => {
   return (
     <div>
-      <section className="relative overflow-hidden flex flex-col h-screen justify-center items-center hero-content">
+      <section className="relative overflow-hidden flex flex-col min-h-screen justify-center items-center hero-content">
        <div className="absolute top-0 left-72 w-72 h-72 rounded-full bg-blue-500 opacity-20 blur-3xl float-blob"></div>
        <div className="flex flex-col justify-center items-center gap-2">
          <h1 className="text-8xl font-bold text-center text-blue-700 italic tracking-tighter [text-shadow:2px_2px_6px_rgba(0,0,0,0.5)]">NEXORA</h1>
@@ -29,6 +32,9 @@ const Home = () => {
       <FeaturedJobs />
       <TopCompanies />
       <PopularCategories />
+      <WhyUs />
+      <HowItWorks />
+      <Testimonials />
     </div>
   )
 }

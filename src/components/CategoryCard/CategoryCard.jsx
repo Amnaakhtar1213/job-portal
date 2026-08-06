@@ -3,7 +3,7 @@ import React from 'react'
 const CategoryCard = () => {
   return (
     
-      <div className="shadow-xl hover:-translate-y-1 transition-all duration-300  bg-blue-100 w-72 mt-14 rounded-3xl p-8">
+      <div className="shadow-xl hover:-translate-y-1 transition-all duration-300  bg-blue-100 w-72 rounded-3xl p-8">
         
           <span className="flex items-center justify-center text-5xl">💻</span>
         <h1 className="text-xl font-bold mt-3 text-gray-800">Frontend Development</h1>
