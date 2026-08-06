@@ -2,7 +2,7 @@ import React from 'react'
 
 const WhyCard = () => {
   return (
-    <div className="flex flex-wrap justify-center gap-14 mt-10">
+    <div className="flex flex-wrap justify-center gap-14 mt-20">
       <div className="border border-gray-100 bg-gray-200 w-60 h-90 rounded-lg shadow-lg  px-6 py-12 hover:scale-105 transition-transform duration-300 items-center flex flex-col gap-4 cursor-pointer">
         <i className="fa-solid fa-briefcase text-amber-900 text-3xl"></i>
         <h1 className="text-gray-700 text-xl font-bold">Best Company Jobs</h1>

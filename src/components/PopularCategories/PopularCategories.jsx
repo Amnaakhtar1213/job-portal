@@ -9,6 +9,7 @@ const PopularCategories = () => {
       <h2 className="text-gray-600 font-bold text-2xl mt-4">Explore jobs by your favorite field.</h2>
      </div>
     <div className="max-w-7xl mx-auto mt-12">
+      
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
     <CategoryCard />
       <CategoryCard />

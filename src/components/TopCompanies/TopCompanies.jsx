@@ -12,7 +12,7 @@ and hiring talented people worldwide.</p>
      </div>
     
      <div className="max-w-7xl mx-auto mt-12">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
     <CompanyCard />
      <CompanyCard />
      <CompanyCard />
@@ -21,7 +21,6 @@ and hiring talented people worldwide.</p>
      <CompanyCard />
      <CompanyCard />
      <CompanyCard />
-    
     </div>
     </div>
     </div>

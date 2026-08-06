@@ -7,6 +7,7 @@ import PopularCategories from '../components/PopularCategories/PopularCategories
 import WhyUs from '../components/WhyUs/WhyUs'
 import HowItWorks from '../components/HowItWorks/HowItWorks'
 import Testimonials from '../components/Testimonials/Testimonials'
+import CTA from '../components/CallToAction/CTA'
 
 const Home = () => {
   return (
@@ -35,6 +36,7 @@ const Home = () => {
       <WhyUs />
       <HowItWorks />
       <Testimonials />
+      <CTA />
     </div>
   )
 }
