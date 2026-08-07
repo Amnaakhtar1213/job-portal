@@ -1,13 +1,15 @@
 import React from 'react'
-import JobsCard from '../JobsCard/JobsCard'
+import JobCard from './JobCard'
+
 
 const JobsGrid = () => {
   return (
-    <div className="flex flex-wrap gap-4 mt-10">
-     <JobsCard />
-       <JobsCard />
-         <JobsCard />
-           <JobsCard />
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+   <JobCard />
+   <JobCard />
+   <JobCard />
+   <JobCard />
+      
     </div>
   )
 }

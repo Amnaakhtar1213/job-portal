@@ -58,3 +58,6 @@
 .float-blob-reverse {
   animation: floatBlobReverse 10s ease-in-out infinite;
 }
+body{
+  overflow-x: hidden;
+}

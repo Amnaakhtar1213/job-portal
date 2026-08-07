@@ -1,12 +1,12 @@
 import React from 'react'
-import JobsHeader from '../Jobs/JobsHeader'
-import JobsGrid from '../Jobs/JobsGrid'
+ import JobsHeader from '../Jobs/JobsHeader'
+ import JobsGrid from '../Jobs/JobsGrid'
 
 
 
 const RightSide = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="">
       <JobsHeader />
       <JobsGrid />
     

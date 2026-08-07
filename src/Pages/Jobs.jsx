@@ -7,11 +7,14 @@ import RightSide from '../components/rightSide/RightSide'
 
 const Jobs = () => {
   return (
-    <div className="bg-indigo-100">
+    <div className="flex flex-col">
       <Nav />
       <JobHero />
-      <section className="flex flex-row items-center gap-10">
-         <FilterSidebar />
+      <section className="flex items-start gap-18">
+        <div className=" shrink-0 sticky top-24 self-start">
+          <FilterSidebar />
+        </div>
+         
       <RightSide />
       </section>
      
