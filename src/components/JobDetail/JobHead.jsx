@@ -1,6 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const JobHead = ({job}) => {
+
+  const saveData = () => {
+
+   const saveJobs = JSON.parse(localStorage.getItem("savedJobs")) || []
+   const alreadySaved = saveJobs.includes(job.id)
+   if(!alreadySaved){
+    saveJobs.push(job.id)
+   }
+   localStorage.setItem("saveJobs", JSON.stringify(saveJobs))
+  }
+  const [isSave, setIsSave] = useState(false)
+   const saveJob = () => {
+    setIsSave(true)
+   } 
+
   return (
     <div className="max-w-7xl mx-auto px-6 py-10">
       <div className="w-full mx-auto flex flex-row items-start justify-between gap-8 p-8 shadow shadow-blue-300">
@@ -25,7 +40,7 @@ const JobHead = ({job}) => {
 
         <div className="w-1/4 flex flex-row gap-4">
           <button className="text-blue-700 bg-white border border-blue-200 px-3 py-2 rounded-3xl font-semibold hover:-translate-y-2 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100">Apply Now</button>
-           <button className="bg-blue-700 text-white px-4 py-2 rounded-3xl font-semibold hover:-translate-y-2 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100">Save Job</button>
+           <button onClick={saveData} className="bg-blue-700 text-white px-4 py-2 rounded-3xl font-semibold hover:-translate-y-2 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100">Save Job</button>
         </div>
       </div>
       </div>

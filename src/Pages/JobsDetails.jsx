@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import jobs from '../data/JobInfo'
 import JobHead from '../components/JobDetail/JobHead'
@@ -12,9 +12,14 @@ import Skills from '../components/JobDetail/Skills'
 import Benefits from '../components/JobDetail/Benefits'
 import CompanyInfo from '../components/JobDetail/CompanyInfo'
 import SimilarJobs from '../components/JobDetail/SimilarJobs'
+import BreadCrumbs from '../components/JobDetail/BreadCrumbs'
 
 const JobsDetails = () => {
   const { id } = useParams()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [id])
 
   const job = jobs.find((job) => job.id === Number(id))
 
@@ -23,6 +28,7 @@ const JobsDetails = () => {
   }
   return (
     <div>
+      <BreadCrumbs job={job}/>
     <JobHead job={job}/>
     <JobSummary job={job}/>
     <JobDesc job={job}/>
