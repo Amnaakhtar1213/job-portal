@@ -40,7 +40,17 @@ const JobHead = ({job}) => {
 
         <div className="w-1/4 flex flex-row gap-4">
           <button className="text-blue-700 bg-white border border-blue-200 px-3 py-2 rounded-3xl font-semibold hover:-translate-y-2 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100">Apply Now</button>
-           <button onClick={saveData} className="bg-blue-700 text-white px-4 py-2 rounded-3xl font-semibold hover:-translate-y-2 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100">Save Job</button>
+        
+          <button
+  onClick={saveJob}
+  className={`px-4 py-2 rounded-2xl font-semibold transition-all duration-300 ${
+    isSave
+      ? "bg-blue-100 text-blue-700 border border-blue-300"
+      : "bg-blue-700 text-white hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-100"
+  }`}
+>
+  {isSave ? "✓ Saved" : "Save Job"}
+</button>
         </div>
       </div>
       </div>
