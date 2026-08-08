@@ -1,15 +1,22 @@
 import { useState } from 'react'
- // import Home from './Pages/Home.jsx'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+ import Home from './Pages/Home.jsx'
  import Jobs from './Pages/Jobs.jsx'
+import JobsDetails from './Pages/JobsDetails.jsx';
+
 
 
 function App() {
  
   return (
-    <>
-     {/* <Home /> */}
-     <Jobs /> 
-    </>
+ <BrowserRouter>
+   <Routes>
+    <Route path="/" element={<Home />}/>
+    <Route path="/jobs" element={<Jobs />}/>
+    <Route path="/jobs/:id" element={<JobsDetails />}/>
+  </Routes>
+</BrowserRouter>
   )
 }
 

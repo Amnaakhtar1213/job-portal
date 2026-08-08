@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
   return (
@@ -8,10 +9,10 @@ const Nav = () => {
         
 
         <div className="flex flex-row justify-between items-center gap-24 text-gray-700">
-          <a className="hover:text-blue-700 transition-all duration-300 hover:underline" href="#" target="_blank">Home</a>
-          <a className="hover:text-blue-700 transition-all duration-300 hover:underline" href="#" target="_blank">Jobs</a>
-          <a className="hover:text-blue-700 transition-all duration-300 hover:underline" href="#" target="_blank">Companies</a>
-          <a className="hover:text-blue-700 transition-all duration-300 hover:underline" href="#" target="_blank">About</a>
+          <Link to="/" className="hover:text-blue-700 transition-all duration-300 hover:underline" href="#" target="_blank">Home</Link>
+          <Link to="/jobs" className="hover:text-blue-700 transition-all duration-300 hover:underline" href="#" target="_blank">Jobs</Link>
+          <Link to="/company" className="hover:text-blue-700 transition-all duration-300 hover:underline" href="#" target="_blank">Companies</Link>
+          <Link to="/about" className="hover:text-blue-700 transition-all duration-300 hover:underline" href="#" target="_blank">About</Link>
         </div>
 
         <div className="flex flex-row justify-between gap-6 items-center">
