@@ -1,42 +1,87 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const Application = () => {
-  return (
-    <div className="bg-blue-100 px-24 py-10">
-      <h1 className="text-blue-700 font-bold text-5xl text-center">NEXORA</h1>
-      <p className="text-gray-400 text-center text-lg mt-2">  Job Application</p>
-      <h3 className="text-gray-700 text-xl mt-4">Apply for this position</h3>
 
-      <div className="">
-        <h1 className="text-800 font-bold text-2xl mt-6">Frontend Developer</h1>
-        <p className="text-gray-500">Microsoft Seattle, USA</p>
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [num, setNum] = useState("")
+  const [edu, setEdu] = useState("")
+  const [experience, setExperience] = useState("")
+  const [skills, setSkills] = useState("")
+  const [cv, setCv] = useState(null)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const param = useParams()
+  const navigate = useNavigate()
+
+  const handleSubmit = () => {
+    const applicationData = {
+      jobId: param.jobId,
+      name: name,
+      email: email,
+      num: num,
+      edu: edu,
+      experience: experience,
+      skills: skills,
+      cv: cv
+    }
+    const existingApplications = JSON.parse(localStorage.getItem("applicationData")) || []
+
+    const updatedApplications = existingApplications.concat(applicationData)
+
+localStorage.setItem("applicationData", JSON.stringify(updatedApplications))
+setIsSubmitted(true)
+
+  }
+
+  return (
+  <>
+  {isSubmitted ? (
+    <div>
+       <div>✓</div>
+  <h2>Application Submitted!</h2>
+  <p>Your application has been successfully submitted.</p>
+  <button onClick={() => {navigate("/jobs")}}>Back to Jobs</button>
+    </div>
+  ) : (
+     <div className="bg-blue-100 px-24 py-10">
+      <h1 className="text-blue-700 font-bold text-5xl text-center">NEXORA</h1>
+       <p className="text-gray-400 text-center text-lg mt-2">  Job Application</p>
+       <h3 className="text-gray-700 text-xl mt-4">Apply for this position</h3>
+
+       <div className="bg-white px-20 py-8  mt-6 rounded-2xl">
+         <h1 className="text-800 font-bold text-2xl mt-6">Frontend Developer</h1>
+         <p className="text-gray-500">Microsoft Seattle, USA</p>
          <h1 className="text-blue-700 font-semibold text-2xl mt-6">Personal Information</h1>
-        <div className="flex flex-col gap-2 bg-white p-4 rounded-2xl mt-2">
-          <label className="text-gray-600">Full Name</label>
-          <input type="text" placeholder="Enter your name"
-          className="outline-none border border-blue-200 rounded placeholder:text-gray-300 hover:shadow hover:shadow-blue-400 px-2"/>
-          <label className="text-gray-600">Email</label>
-          <input type="email" placeholder="Enter Email" className="outline-none border border-blue-200 rounded placeholder:text-gray-300 hover:shadow hover:shadow-blue-400 px-2"/>
-         <label className="text-gray-600">Phone Number</label>
-         <input type="tel" placeholder="Enter phone number" className="outline-none border border-blue-200 rounded placeholder:text-gray-300 hover:shadow hover:shadow-blue-400 px-2"/>
+        <div className="flex flex-col gap-2 bg-blue-100 p-4 rounded-2xl mt-2">
+           <label className="text-gray-600">Full Name</label>
+           <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter your name"
+          className="outline-none border border-blue-200 rounded placeholder:text-gray-300 hover:shadow hover:shadow-blue-400 px-2 py-1"/>
+          <label className="text-gray-700">Email</label>
+           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter Email" className="outline-none border border-blue-200 rounded placeholder:text-gray-300 hover:shadow hover:shadow-blue-400 px-2 py-1"/>
+          <label className="text-gray-700">Phone Number</label>
+          <input type="tel" value={num} onChange={(e) => setNum(e.target.value)} placeholder="Enter phone number" className="outline-none border border-blue-200 rounded placeholder:text-gray-300 hover:shadow hover:shadow-blue-400 px-2 py-1"/>
         </div>
         <h1 className="text-blue-700 font-semibold text-2xl mt-6">Professional Information</h1>
-        <div className="flex flex-col gap-2 bg-white rounded-2xl p-4 mt-2">
-          <label className="text-gray-600">Education</label>
-          <input type="text" placeholder="e.g. Bachelor's in Computer Science" className="outline-none border border-blue-200 rounded placeholder:text-gray-300 hover:shadow hover:shadow-blue-400 px-2"/>
-          <label className="text-gray-600">Experience</label>
-          <input type="email" placeholder="e.g. 2 years" className="outline-none border border-blue-200 rounded placeholder:text-gray-300 hover:shadow hover:shadow-blue-400 px-2"/>
-         <label className="text-gray-600">Skills</label>
-         <input type="tel" placeholder="e.g. React, JavaScript, Tailwind CSS" className="outline-none border border-blue-200 rounded placeholder:text-gray-300 hover:shadow hover:shadow-blue-400 px-2"/>
-          <h1 className="text-gray-600">Resume / CV</h1>
-          <input type="file" className="outline-none border border-blue-200 rounded text-gray-300 hover:shadow hover:shadow-blue-400 px-2"/>
-        </div>
-        <div className="text-center">
-           <button className="bg-blue-700 text-white  px-4 py-1 rounded-xl hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-2 transition-all duration-300 mt-6 mb-4 font-semibold text-lg ">Submit Application</button>
-        </div>
+        <div className="flex flex-col gap-2 bg-blue-100 rounded-2xl p-4 mt-2">
+          <label className="text-gray-700">Education</label>
+           <input type="text" value={edu} onChange={(e) => setEdu(e.target.value)} placeholder="e.g. Bachelor's in Computer Science" className="outline-none border border-blue-200 rounded placeholder:text-gray-300 hover:shadow hover:shadow-blue-400 px-2 py-1"/>
+         <label className="text-gray-700">Experience</label>
+           <input type="text" value={experience} onChange={(e) => setExperience(e.target.value)} placeholder="e.g. 2 years" className="outline-none border border-blue-200 rounded placeholder:text-gray-300 hover:shadow hover:shadow-blue-400 px-2 py-1"/>
+        <label className="text-gray-700">Skills</label>
+         <input type="text" value={skills} onChange={(e) => setSkills(e.target.value)} placeholder="e.g. React, JavaScript, Tailwind CSS" className="outline-none border border-blue-200 rounded placeholder:text-gray-300 hover:shadow hover:shadow-blue-400 px-2 py-1"/>
+         <h1 className="text-gray-700">Resume / CV</h1>
+          <input type="file" onChange={(e) => setCv(e.target.files[0])} className="outline-none border border-blue-200 rounded text-gray-300 hover:shadow hover:shadow-blue-400 px-2"/>
+       </div>
+           <button className="bg-blue-700 text-white  px-4 py-1 rounded-xl hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-2 transition-all duration-300 mt-6 mb-4 font-semibold text-lg" onClick={handleSubmit}>Submit Application</button>
+         </div>
       
-      </div>
-    </div>
+     </div>
+  )}
+  </>
+   
+
   )
 }
 
