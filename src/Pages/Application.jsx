@@ -17,7 +17,7 @@ const Application = () => {
 
   const handleSubmit = () => {
     const applicationData = {
-      jobId: param.jobId,
+      jobId: Number(param.jobId),
       name: name,
       email: email,
       num: num,
@@ -38,12 +38,18 @@ setIsSubmitted(true)
   return (
   <>
   {isSubmitted ? (
-    <div>
-       <div>✓</div>
-  <h2>Application Submitted!</h2>
-  <p>Your application has been successfully submitted.</p>
-  <button onClick={() => {navigate("/jobs")}}>Back to Jobs</button>
+   
+    <div className="relative p-30 flex items-center justify-center w-full h-full">
+       <div className="absolute top-10 left-60 w-72 h-72 rounded-full bg-blue-400 opacity-20 blur-3xl float-blob"></div>
+       <div className=" bg-gray-100 rounded-xl shadow shadow-blue-300 p-10 flex flex-col items-center justify-center mt-10">
+       <div className="text-green-600 text-5xl font-bold mt-6">✓</div>
+  <h2 className="text-blue-700 font-bold text-3xl mt-8">Application Submitted!</h2>
+  <p className="text-gray-400 mt-4">Your application has been successfully submitted.</p>
+  <button className="bg-blue-700 text-white px-4 py-2 font-bold rounded-xl shadow-xl shadow-blue-300 hover:-translate-y-2 transition-all duration-300 mt-16" onClick={() => {navigate("/jobs")}}>Back to Jobs</button>
     </div>
+     <div className="absolute bottom-0 right-60 w-72 h-72 rounded-full bg-indigo-500 opacity-20 blur-3xl float-blob"></div>
+    </div>
+  
   ) : (
      <div className="bg-blue-100 px-24 py-10">
       <h1 className="text-blue-700 font-bold text-5xl text-center">NEXORA</h1>

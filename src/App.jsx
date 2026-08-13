@@ -7,19 +7,22 @@ import JobsDetails from './Pages/JobsDetails.jsx';
 // import Footer from './components/Footer/Footer.jsx';
 import Loggin from './Pages/Loggin.jsx';
 import Application from './Pages/Application.jsx';
+import Signup from './Pages/Signup.jsx';
 
 
 
 function App() {
- 
+
   return (
  <BrowserRouter>
    <Routes>
     <Route path="/" element={<Home />}/>
+    <Route path="/loggin" element={<Loggin />}/>
     <Route path="/jobs" element={<Jobs />}/>
     <Route path="/jobs/:id" element={<JobsDetails />}/>
     <Route path="/loggin/:jobId" element={<Loggin />}></Route>
     <Route path="/application/:jobId" element={<Application />} />
+    <Route path="/signup" element={<Signup />}></Route>
 
   </Routes>
   {/* <Footer /> */}

@@ -18,8 +18,12 @@ const Loggin = () => {
      setError("User not found")
    } else {
       localStorage.setItem("currentUser", JSON.stringify(user))
-      navigate(`/application/${jobId}`)
-   }
+    if(jobId){
+       navigate(`/application/${jobId}`)
+     } else {
+       navigate("/jobs")
+     }
+    }
   }
   return (
     <div className=" bg-blue-100 flex flex-col items-center justify-center p-34">
@@ -50,7 +54,7 @@ const Loggin = () => {
           <p className="text-gray-400">
               Don't have an account?
           </p>
-          <button className="bg-white  text-blue-600 border border-blue-300 font-bold px-4 py-1 rounded-xl hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover:shadow-blue-300">Sign Up</button>
+          <Link to="/signup" className="bg-white  text-blue-600 border border-blue-300 font-bold px-4 py-1 rounded-xl hover:shadow-xl hover:-translate-y-2 transition-all duration-300 hover:shadow-blue-300">Sign Up</Link>
         </div>
       </div>
      

@@ -2,21 +2,39 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const JobHead = ({job}) => {
+const navigate = useNavigate()
 
-  const navigate = useNavigate()
+  const applications = JSON.parse(localStorage.getItem("applicationData")) || []
+
+  const isApplied = applications.some(application => application.jobId === job.id )
+
+  
+const savedJobs = JSON.parse(localStorage.getItem("savedJobs")) || []
+   
+   const [isSave, setIsSave] = useState(savedJobs.includes(job.id))
+
 
   const saveData = () => {
+    const savedJobs = JSON.parse(localStorage.getItem("savedJobs")) || []
 
-   const saveJobs = JSON.parse(localStorage.getItem("savedJobs")) || []
-   const alreadySaved = saveJobs.includes(job.id)
-   if(!alreadySaved){
-    saveJobs.push(job.id)
-   }
-   localStorage.setItem("saveJobs", JSON.stringify(saveJobs))
+   const alreadySaved = savedJobs.includes(job.id)
+
+   if(alreadySaved){
+     const updatedSavedJobs = savedJobs.filter(
+      savedJob => savedJob !== job.id)
+
+   localStorage.setItem("savedJobs", JSON.stringify(updatedSavedJobs)) 
+    setIsSave(false)
+       } else { 
+
+ const updatedSavedJobs = [...savedJobs, job.id]
+ localStorage.setItem("savedJobs", JSON.stringify(updatedSavedJobs))
+    setIsSave(true)   
+      }
+       
   }
-  const [isSave, setIsSave] = useState(false)
    const saveJob = () => {
-    setIsSave(true)
+    saveData()
    } 
 
   return (
@@ -42,7 +60,11 @@ const JobHead = ({job}) => {
         </div>
 
         <div className="w-1/4 flex flex-row gap-4">
-          <button onClick = {() => navigate(`/loggin/${job.Id}`)} className="text-blue-700 bg-white border border-blue-200 px-3 py-2 rounded-3xl font-semibold hover:-translate-y-2 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100">Apply Now</button>
+          <button onClick = {() => 
+            {if(!isApplied){
+              navigate(`/loggin/${job.id}`)
+            }}
+          } className="text-blue-700 bg-white border border-blue-200 px-3 py-2 rounded-3xl font-semibold hover:-translate-y-2 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100">{isApplied ? "✓ Applied" : "Apply Now"}</button>
         
           <button 
           onClick={saveJob}
