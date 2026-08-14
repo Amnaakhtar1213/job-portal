@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
 
@@ -47,9 +47,9 @@ const handleLogout = () => {
       Login
     </Link>
 
-    <button className="bg-blue-700 text-white px-4 py-1 rounded">
+    <Link to="/signup" className="bg-blue-700 text-white px-4 py-1 rounded">
       Sign Up
-    </button>
+    </Link>
   </div>
           ) 
          }

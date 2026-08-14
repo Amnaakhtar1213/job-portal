@@ -36,7 +36,7 @@ setIsSubmitted(true)
   }
 
   return (
-  <>
+   <>
   {isSubmitted ? (
    
     <div className="relative p-30 flex items-center justify-center w-full h-full">
@@ -90,5 +90,4 @@ setIsSubmitted(true)
 
   )
 }
-
 export default Application

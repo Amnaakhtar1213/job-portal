@@ -8,6 +8,7 @@ import WhyUs from '../components/WhyUs/WhyUs'
 import HowItWorks from '../components/HowItWorks/HowItWorks'
 import Testimonials from '../components/Testimonials/Testimonials'
 import CTA from '../components/CallToAction/CTA'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -21,7 +22,10 @@ const Home = () => {
         <p className="tracking-wider text-gray-500 text-center mt-4">Find opportunities that shape your future
      with trusted companies around the world.</p>
      <div>
-      <button className="bg-blue-700 text-white py-2 px-6 rounded hover:bg-blue-800 hover:-translate-y-1 transition transform duration-300 ease-in-out tracking-wide [text-shadow:1px_1px_3px_rgba(0,0,0,0.3)] animate-fadeIn mt-8">Start Exploring</button>
+      <Link to="/jobs">
+        <button className="bg-blue-700 text-white py-2 px-6 rounded hover:bg-blue-800 hover:-translate-y-1 transition transform duration-300 ease-in-out tracking-wide [text-shadow:1px_1px_3px_rgba(0,0,0,0.3)] animate-fadeIn mt-8">Start Exploring</button>
+        </Link>
+    
      </div>
      <p className="text-gray-500 text-center mt-40">Scroll to Explore</p>
    <i className="fa-solid fa-arrow-down mt-2 animate-[upDown_2s_ease-in-out_infinite]"></i>
