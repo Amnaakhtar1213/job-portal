@@ -1,7 +1,8 @@
 import React from 'react'
 import TestCard from '../TestCard/TestCard'
+import testimonials from '../../data/Testimonials'
 
-const Testimonials = () => {
+const Testimonials = ({testimonial}) => {
   return (
     <div className="relative p-24 overflow-hidden">
       {/* <div className="absolute bottom-0 right-42 w-72 h-72 rounded-full bg-violet-600 opacity-30 blur-3xl float-blob-reverse"></div> */}
@@ -12,9 +13,9 @@ const Testimonials = () => {
 </p>
       </div>
       <div className="flex flex-wrap justify-center gap-10">
-        <TestCard />
-      <TestCard />
-      <TestCard />
+       {testimonials.map((testimonial) => {
+        return <TestCard testimonial={testimonial} key={testimonial.id}/>
+       })}
       </div>
      </div>
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import jobs from '../data/JobInfo'
 
 const Application = () => {
 
@@ -14,6 +15,8 @@ const Application = () => {
 
   const param = useParams()
   const navigate = useNavigate()
+
+  const job = jobs.find((job) => job.id === Number(param.jobId))
 
   const handleSubmit = () => {
     const applicationData = {
@@ -57,8 +60,8 @@ setIsSubmitted(true)
        <h3 className="text-gray-700 text-xl mt-4">Apply for this position</h3>
 
        <div className="bg-white px-20 py-8  mt-6 rounded-2xl">
-         <h1 className="text-800 font-bold text-2xl mt-6">Frontend Developer</h1>
-         <p className="text-gray-500">Microsoft Seattle, USA</p>
+         <h1 className="text-800 font-bold text-2xl mt-6">{job.title}</h1>
+         <p className="text-gray-500">{job.location}</p>
          <h1 className="text-blue-700 font-semibold text-2xl mt-6">Personal Information</h1>
         <div className="flex flex-col gap-2 bg-blue-100 p-4 rounded-2xl mt-2">
            <label className="text-gray-600">Full Name</label>

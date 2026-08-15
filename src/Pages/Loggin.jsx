@@ -13,9 +13,13 @@ const Loggin = () => {
   const {jobId} = useParams();
 
   const handleLogin = () => {
+    if(!email || !password){
+      setError("Please enter your email and password")
+      return 
+    }
 
     const users = JSON.parse(localStorage.getItem("users")) || []
-    
+
    const user = users.find((user) => user.password === password && user.email === email)
 
    if(!user){

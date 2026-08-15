@@ -4,11 +4,11 @@ import React from 'react'
 
 
 
-const RightSide = () => {
+const RightSide = ({location, category, jobType, experience, salaryRange}) => {
   return (
     <div className="">
       <JobsHeader />
-      <JobsGrid />
+      <JobsGrid location={location} category={category} jobType={jobType} experience={experience} salaryRange={salaryRange}/>
     
     </div>
   )

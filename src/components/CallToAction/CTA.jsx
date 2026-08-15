@@ -1,8 +1,10 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const CTA = () => {
+  const navigate = useNavigate()
   return (
-    <div className="relative px-24 overflow-hidden mt-20 py-24">
+    <div className="min-h-screen relative px-24 overflow-hidden mt-20 py-24">
       <div className=" flex flex-col items-center justify-center gap-4">
       <div className="absolute top-40 left-52 w-72 h-72 rounded-full bg-blue-500 opacity-20 blur-3xl float-blob"></div>
       <h1 className="text-4xl hover:scale-110 transition-transform duration-300 mt-10">🚀</h1>
@@ -11,7 +13,7 @@ const CTA = () => {
       </p>
 
       <div className="flex flex-row items-center justify-between gap-10 mt-16">
-        <button className="bg-indigo-600 text-white py-2 px-6 rounded-2xl hover:bg-indigo-700 font-bold hover:scale-105 transition transform duration-300 ease-in-out">Explore Jobs</button>
+        <button onClick={() => navigate("/jobs")} className="bg-indigo-600 text-white py-2 px-6 rounded-2xl hover:bg-indigo-700 font-bold hover:scale-105 transition transform duration-300 ease-in-out">Explore Jobs</button>
          <button className="bg-white text-indigo-600 py-2 px-6 rounded-2xl hover:bg-gray-100 font-bold border border-indigo-600 hover:scale-105 transition transform duration-300 ease-in-out">Post A Job</button>
       </div>
 

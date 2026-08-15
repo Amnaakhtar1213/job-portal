@@ -1,7 +1,8 @@
 import React from 'react'
 import CategoryCard from '../CategoryCard/CategoryCard'
+import categories from '../../data/Category'
 
-const PopularCategories = () => {
+const PopularCategories = ({category}) => {
   return (
     <div className="p-10 bg-gray-100">
        <div className="flex flex-col items-center justify-center">
@@ -11,12 +12,9 @@ const PopularCategories = () => {
     <div className="max-w-7xl mx-auto mt-12">
       
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-    <CategoryCard />
-      <CategoryCard />
-        <CategoryCard />
-          <CategoryCard />
-            <CategoryCard />
-              <CategoryCard />
+    {categories.map((category) => {
+      return <CategoryCard key={category.id} category={category}/>
+    })}
     </div>
     </div>
     </div>
