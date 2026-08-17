@@ -10,7 +10,7 @@ import Application from './Pages/Application.jsx';
 import Signup from './Pages/Signup.jsx';
 import SavedJobs from './Pages/SavedJobs.jsx';
 import Company from './Pages/Company.jsx';
-
+import About from './Pages/About.jsx';
 
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
     <Route path="/signup" element={<Signup />}></Route>
      <Route path="/saved-jobs" element={<SavedJobs />}></Route>
       <Route path="/company" element={<Company />}></Route>
+        <Route path="/about" element={<About />}></Route>
 
   </Routes>
    {/* <Footer /> */}
