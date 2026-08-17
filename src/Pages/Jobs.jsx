@@ -4,6 +4,7 @@ import JobHero from '../components/Jobs/JobHero'
 import FilterSidebar from '../components/Jobs/FilterSidebar'
 import RightSide from '../components/rightSide/RightSide'
 import { useSearchParams } from 'react-router-dom'
+import jobs from '../data/JobInfo'
 
 
 const Jobs = () => {
@@ -22,16 +23,27 @@ const Jobs = () => {
   setSalaryRange("")
   setSearchParam({})
   }
+
   return (
     <div className="flex flex-col">
       <Nav />
       <JobHero />
       <section className="flex items-start gap-18">
         <div className=" shrink-0 sticky top-24 self-start">
-          <FilterSidebar location={location} setLocation={setLocation} category={category} setCategory={setCategory} jobType={jobType} setJobType={setJobType} experience={experience} setExperience={setExperience} salaryRange={salaryRange} setSalaryRange={setSalaryRange} resetFilter={resetFilter}/>
+          <FilterSidebar 
+          location={location} 
+          setLocation={setLocation} 
+          category={category} 
+          setCategory={setCategory} 
+          jobType={jobType} 
+          setJobType={setJobType} 
+          experience={experience} setExperience={setExperience} salaryRange={salaryRange} setSalaryRange={setSalaryRange} resetFilter={resetFilter}
+          searchParam={searchParam}
+           setSearchParam={setSearchParam}/>
+         
         </div>
          
-      <RightSide location={location} category={category} jobType={jobType} experience={experience} salaryRange={salaryRange}/>
+      <RightSide jobs={jobs} location={location} category={category} jobType={jobType} experience={experience} salaryRange={salaryRange}/>
       </section>
      
     </div>

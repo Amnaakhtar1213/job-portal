@@ -8,6 +8,7 @@ import JobsDetails from './Pages/JobsDetails.jsx';
 import Loggin from './Pages/Loggin.jsx';
 import Application from './Pages/Application.jsx';
 import Signup from './Pages/Signup.jsx';
+import SavedJobs from './Pages/SavedJobs.jsx';
 
 
 
@@ -23,6 +24,7 @@ function App() {
     <Route path="/loggin/:jobId" element={<Loggin />}></Route>
     <Route path="/application/:jobId" element={<Application />} />
     <Route path="/signup" element={<Signup />}></Route>
+     <Route path="/saved-jobs" element={<SavedJobs />}></Route>
 
   </Routes>
   {/* <Footer /> */}

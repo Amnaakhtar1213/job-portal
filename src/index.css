@@ -18,6 +18,15 @@
   }
 }
 
+@keyframes rightLeft {
+   0%, 100% {
+    transform: translateX(8px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+}
+
 @keyframes fadeup {
   from {
     opacity: 0;

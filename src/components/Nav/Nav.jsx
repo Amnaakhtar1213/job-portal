@@ -27,7 +27,7 @@ const handleLogout = () => {
         <div className="flex flex-row justify-between gap-6 items-center">
 
  {currentUser ? (
-   <div className="flex items-center gap-10">
+   <div className="flex items-center justify-center gap-10">
 
  <span className="text-gray-500 font-semibold">
   Welcome,{" "}
@@ -37,6 +37,10 @@ const handleLogout = () => {
 </span>  
 
      <button className="bg-blue-700 text-white px-4 py-1 rounded-xl" onClick={handleLogout}>Logout</button>
+
+     <Link to="/saved-jobs">
+        <i className="fa-solid fa-heart text-purple-600 hover:scale-120 hover:text-purple-500 transition-all text-xl"></i>
+    </Link>
        </div>
        ) : (
         <div className="flex items-center gap-4">

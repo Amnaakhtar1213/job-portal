@@ -1,8 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 
 const JobsCard = ({job}) => {
+// get saved items from localStorage, if no items use empty array 
+  const [saved, setSaved] = useState(() => {
+    const savedJobs = JSON.parse(localStorage.getItem("savedJobs")) || []
+
+// if there is already job return true
+    return savedJobs.includes(job.id)
+  })
+
+  const handleSaved = () => {
+    // is this current job is already saved/inside
+    const latestJobs = JSON.parse(localStorage.getItem("savedJobs")) || []
+
+    // if it already saved we unsave this 
+    if(latestJobs.includes(job.id)){
+      const updatedJobs = latestJobs.filter((id) => id !== job.id)
+
+      //update localStorage by removing already saved job
+      localStorage.setItem("savedJobs", JSON.stringify(updatedJobs))
+
+        setSaved(false)
+    } else {
+      // with previous job add new jobs too
+      const updatedJobs = [...latestJobs, job.id]
+      // with previous and add new job store in localStorage too
+      localStorage.setItem("savedJobs", JSON.stringify(updatedJobs))
+       setSaved(true)
+    }
+  } 
 
   const navigate = useNavigate()
   return (
@@ -13,11 +41,17 @@ const JobsCard = ({job}) => {
      <i className="fa-solid fa-building text-blue-500 text-2xl"></i>
     <h1 className="text-gray-700 font-semibold">{job.company}</h1>
     </div>
-    <i className="fa-solid fa-heart text-gray-400 hover:text-red-600 transition-all duration-300"></i>
+   {
+    saved ? ( 
+    <i onClick={handleSaved} className="fa-solid fa-heart text-purple-700"></i>
+  ) : ( 
+  <i onClick={handleSaved}  
+  className="fa-solid fa-heart text-gray-400"></i>)
+   }
   </div>
   <p className="mt-4 text-2xl font-bold">{job.title}</p>
   <p className="text-gray-500 flex items-center gap-2 mt-2">
-  <i className="fa-solid fa-location-dot text-red-600"></i>
+ <i className="fa-solid fa-location-dot text-red-600"></i>
   {job.location}
 </p>
   <div className="flex gap-2 flex-wrap mt-4">

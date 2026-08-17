@@ -1,15 +1,53 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
-const JobCard = ({job}) => {
+const JobCard = ({job, removeJob}) => {
+
+   
+
+  const [saved, setSaved] = useState(() => {
+    const savedJobs = JSON.parse(localStorage.getItem("savedJobs")) || []
+
+    return savedJobs.includes(job.id)
+  })
+
+  const handleSaved = () => {
+
+    const latestSaved = 
+    JSON.parse(localStorage.getItem("savedJobs")) || []
+
+    if(latestSaved.includes(job.id)){
+
+         const updatedJobs = 
+         latestSaved.filter((id) => id !== job.id)
+
+      localStorage.setItem("savedJobs", JSON.stringify(updatedJobs))
+
+      setSaved(false)
+
+      if(removeJob){
+             removeJob(job.id)
+    }
+     } else {
+
+      const updatedSaved = [...latestSaved, job.id]
+      localStorage.setItem("savedJobs", JSON.stringify(updatedSaved))
+
+      setSaved(true)
+     }
+
+  }
   return (
     <div className="border border-indigo-400 w-full px-4 py-4 rounded-xl bg-white mt-6">
       <div className="flex flex-row items-center justify-between">
         <h1 className="text-gray-600 font-semibold text-xl"> <i className="fa-solid fa-g text-xl font-bold 
    bg-linear-to-r from-blue-500 via-red-700 via-yellow-500 to-green-500 bg-clip-text text-transparent">
 </i> {job.company}</h1>
-       <i className="fa-solid fa-heart text-gray-400"></i>
+       {saved ? (
+        <i onClick={handleSaved}className="fa-solid fa-heart text-purple-600"></i>
+      ) : (
+      <i onClick={handleSaved} className="fa-solid fa-heart text-gray-400"></i>)}
       </div>
       
       <h1 className="text-xl font-bold mt-4 leading-tight">{job.title}</h1>

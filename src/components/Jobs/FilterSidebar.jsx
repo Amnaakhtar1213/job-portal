@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FilterSidebar = ({location, setLocation, category, setCategory, jobType, setJobType, experience, setExperience, salaryRange, setSalaryRange, resetFilter}) => {
+const FilterSidebar = ({searchParam, setSearchParam, location, setLocation, category, setCategory, jobType, setJobType, experience, setExperience, salaryRange, setSalaryRange, resetFilter}) => {
   
   return (
     <div className="ml-10 p-6 mt-8 border border-indigo-200 shadow-xl shadow-indigo-600 rounded-2xl hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl max-w-7xl mx-auto">
@@ -12,7 +12,9 @@ const FilterSidebar = ({location, setLocation, category, setCategory, jobType, s
 
         <div className="flex gap-6 items-center">
            <label className="text-gray-700 font-bold">Search</label>
-        <input type="text" placeholder="Search" className=" border border-indigo-200 rounded px-4 py-1 hover:border-indigo-300 hover:shadow-indigo-400 hover:shadow focus:outline-none"/>
+        <input value={searchParam.get("search") || ""} 
+        onChange={(e) => setSearchParam({search: e.target.value})} 
+        type="text" placeholder="Search" className=" border border-indigo-200 rounded px-4 py-1 hover:border-indigo-300 hover:shadow-indigo-400 hover:shadow focus:outline-none"/>
         </div>
 
         <div className="flex gap-6 items-center">
