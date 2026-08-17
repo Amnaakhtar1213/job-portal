@@ -9,6 +9,7 @@ import Loggin from './Pages/Loggin.jsx';
 import Application from './Pages/Application.jsx';
 import Signup from './Pages/Signup.jsx';
 import SavedJobs from './Pages/SavedJobs.jsx';
+import Company from './Pages/Company.jsx';
 
 
 
@@ -25,9 +26,10 @@ function App() {
     <Route path="/application/:jobId" element={<Application />} />
     <Route path="/signup" element={<Signup />}></Route>
      <Route path="/saved-jobs" element={<SavedJobs />}></Route>
+      <Route path="/company" element={<Company />}></Route>
 
   </Routes>
-  {/* <Footer /> */}
+   {/* <Footer /> */}
 
 </BrowserRouter>
   )

@@ -18,9 +18,9 @@ const handleLogout = () => {
         
 
         <div className="flex flex-row justify-between items-center gap-24 text-gray-700">
-          <Link to="/" className="hover:text-blue-700 transition-all duration-300 hover:underline" href="#" target="_blank">Home</Link>
-          <Link to="/jobs" className="hover:text-blue-700 transition-all duration-300 hover:underline" href="#" target="_blank">Jobs</Link>
-          <Link to="/company" className="hover:text-blue-700 transition-all duration-300 hover:underline" href="#" target="_blank">Companies</Link>
+          <Link to="/" className="hover:text-blue-700 transition-all duration-300 hover:underline">Home</Link>
+          <Link to="/jobs" className="hover:text-blue-700 transition-all duration-300 hover:underline">Jobs</Link>
+          <Link to="/company" className="hover:text-blue-700 transition-all duration-300 hover:underline">Companies</Link>
           <Link to="/about" className="hover:text-blue-700 transition-all duration-300 hover:underline">About</Link>
         </div>
 
