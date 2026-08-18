@@ -26,10 +26,10 @@ const Jobs = () => {
 
   return (
     <div className="flex flex-col">
-      <Nav />
+
       <JobHero />
-      <section className="flex items-start gap-18">
-        <div className=" shrink-0 sticky top-24 self-start">
+      <section className="flex flex-col md:flex-row gap-6 md:gap-20 px-4 pb-8 md:pb-14">
+        <div className=" shrink-0 md:sticky top-24 self-start">
           <FilterSidebar 
           location={location} 
           setLocation={setLocation} 

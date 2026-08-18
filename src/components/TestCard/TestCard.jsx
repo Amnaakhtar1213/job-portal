@@ -3,7 +3,7 @@ import testimonials from '../../data/Testimonials'
 
 const TestCard = ({testimonial}) => {
   return (
-    <div className="mt-16">
+    <div className="mt-8 md:mt-16">
       <div className="border border-blue-200 hover:border-blue-500 hover:-translate-y-2 hover:shadow-blue-200 transition-all duration-300 rounded-2xl shadow-xl w-66 h-90 flex items-center justify-between flex-col gap-4 px-2 py-4">
         <div className="flex flex-row items-center justify-between gap-30">
         <h1>⭐⭐⭐⭐⭐</h1>

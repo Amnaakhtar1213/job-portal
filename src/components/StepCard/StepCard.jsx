@@ -2,7 +2,7 @@ import React from 'react'
 
 const StepCard = () => {
   return (
-    <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="mt-6 md:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 ml-20">
       <div className="group border border-blue-200 hover:border-blue-500 hover:-translate-y-2 transition-all duration-300 rounded-2xl shadow-xl w-70 h-80 flex items-center justify-center flex-col gap-4 p-4">
         <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold">1</div>
         <i className="group-hover:-translate-y-1 transition-all duration-300 fa-solid fa-magnifying-glass text-gray-700 text-4xl group-hover:scale-120 group-hover:text-gray-700"></i>

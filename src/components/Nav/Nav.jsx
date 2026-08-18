@@ -14,15 +14,19 @@ const handleLogout = () => {
 
   return (
     <div>
-       <nav className="h-14 flex flex-row justify-between items-center px-4 md:px-10 shadow">
-        <div className="text-blue-700 text-2xl md:text-3xl italic font-bold transition duration-300 ease-in-out hover:[text-shadow:0_0_24px_rgba(29,78,216,0.6)]">NEXORA</div>
+       <nav className="fixed top-0 left-0 right-0 h-16 md:h-14 flex flex-row justify-between items-center px-4 md:px-10 shadow bg-white z-50">
+        <div className="text-blue-700 text-2xl md:text-3xl italic font-bold">NEXORA</div>
 
-  <button
-    className="md:hidden text-blue-700 text-2xl"
-    onClick={() => setIsMenuOpen(!isMenuOpen)}
-  >
-    <i className={`fa-solid ${isMenuOpen ? "fa-xmark" : "fa-bars"}`}></i>
-  </button>
+<button
+        className="md:hidden text-blue-700 text-2xl w-10 h-10 flex items-center justify-center rounded-lg hover:bg-blue-50"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        <i
+          className={`fa-solid ${
+            isMenuOpen ? "fa-xmark" : "fa-bars"
+          }`}
+        ></i>
+      </button>
         
 
         <div className="hidden md:flex flex-row justify-between items-center gap-4 md:gap-24 text-gray-700">
@@ -35,23 +39,25 @@ const handleLogout = () => {
         <div className="flex flex-row justify-between gap-6 items-center">
 
  {currentUser ? (
-   <div className="hidden md:flex items-center justify-center gap-4 md:gap-10">
+   <div className=" md:flex items-center justify-center gap-4 md:gap-10">
 
- <span className="text-gray-500 font-semibold">
+<span className="md:hidden lg:hidden text-purple-700 font-bold text-xl mr-4">{currentUser.name}</span>
+
+ <span className="hidden md:flex text-gray-500 font-semibold items-center">
   Welcome,{" "}
-  <span className="text-purple-700 font-bold text-xl ml-2">
+  <span className=" text-purple-700 font-bold text-xl ml-4">
     {currentUser.name}
   </span>
 </span>  
 
-     <button className="bg-blue-700 text-white px-4 py-1 rounded-xl" onClick={handleLogout}>Logout</button>
+     <button className="hidden md:flex bg-blue-700 text-white px-4 py-1 rounded-xl " onClick={handleLogout}>Logout</button>
 
      <Link to="/saved-jobs">
-        <i className="fa-solid fa-heart text-purple-600 hover:scale-120 hover:text-purple-500 transition-all text-xl"></i>
+        <i className="hidden md:flex fa-solid fa-heart text-purple-600 hover:scale-120 hover:text-purple-500 transition-all text-xl"></i>
     </Link>
        </div>
        ) : (
-        <div className="hidden md:flex items-center gap-4">
+        <div className="md:flex items-center gap-4">
     <Link
       to="/loggin"
       className="text-blue-700 border px-6 rounded-xl py-1 hover:bg-blue-700 hover:text-white"
@@ -67,6 +73,42 @@ const handleLogout = () => {
          }
         </div>
       </nav>
+      {isMenuOpen && (
+      // <div className="md:hidden bg-white shadow-lg px-6 py-5">
+
+      //   <div className="flex flex-col gap-5">
+
+      //     <Link to="/" className="text-gray-700">
+      //       Home
+      //     </Link>
+
+      //     <Link to="/jobs" className="text-gray-700">
+      //       Jobs
+      //     </Link>
+
+      //     <Link to="/company" className="text-gray-700">
+      //       Companies
+      //     </Link>
+
+      //     <Link to="/about" className="text-gray-700">
+      //       About
+      //     </Link>
+
+      //   </div>
+
+      // </div>
+
+       <div className="md:hidden flex flex-col justify-between pl-6 pt-2 gap-4 md:gap-24 text-gray-700 bg-gray-100 pb-4">
+          <Link to="/" className="hover:text-blue-700 transition-all duration-300 hover:underline">Home</Link>
+          <Link to="/jobs" className="hover:text-blue-700 transition-all duration-300 hover:underline">Jobs</Link>
+          <Link to="/company" className="hover:text-blue-700 transition-all duration-300 hover:underline">Companies</Link>
+          <Link to="/about" className="hover:text-blue-700 transition-all duration-300 hover:underline">About</Link>
+          <Link to="/saved-jobs" className="hover:text-blue-700 transition-all duration-300 hover:underline">
+       Saved Jobs
+    </Link>
+          <button className="bg-blue-700 text-white px-4 py-1 rounded-xl mr-6 " onClick={handleLogout}>Logout</button>
+        </div>
+    )}
     </div>
   )
 }

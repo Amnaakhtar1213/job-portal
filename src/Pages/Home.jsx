@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <div>
+      
       <section className="relative overflow-hidden flex flex-col min-h-screen justify-center items-center hero-content">
        <div className="absolute top-0 left-72 w-72 h-72 rounded-full bg-blue-500 opacity-20 blur-3xl float-blob"></div>
        <div className="flex flex-col justify-center items-center gap-2">

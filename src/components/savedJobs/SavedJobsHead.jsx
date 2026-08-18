@@ -9,7 +9,7 @@ const SavedJobsHead = ({savedJobs}) => {
   <div className="flex items-center gap-4 text-purple-700">
     <i className="fa-solid fa-heart text-xl"></i>
 
-    <h1 className="text-4xl font-bold">
+    <h1 className="text-2xl md:text-4xl font-bold">
       Saved Jobs
     </h1>
 
@@ -24,7 +24,7 @@ const SavedJobsHead = ({savedJobs}) => {
     {savedJobs.length} {savedJobs.length === 1 ? "job" : "jobs"} saved
   </h3>
 
-  <Link to="/jobs" className="group bg-purple-700 text-white px-4 py-1 rounded-xl mt-4 shadow-lg shadow-purple-400"><i className="fa-solid fa-arrow-left mr-2 group-hover:animate-[rightLeft_2s_ease-in-out_infinite]"></i> Browse jobs</Link>
+  <Link to="/jobs" className="group bg-purple-700 text-white px-4 py-1 rounded-xl mt-8 shadow-lg shadow-purple-400"><i className="fa-solid fa-arrow-left mr-2 group-hover:animate-[rightLeft_2s_ease-in-out_infinite]"></i> Browse jobs</Link>
 
 </div>
   )

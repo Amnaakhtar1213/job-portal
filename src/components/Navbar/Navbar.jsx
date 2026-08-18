@@ -4,8 +4,7 @@ import Nav from '../Nav/Nav'
 
 const Navbar = () => {
   return (
-    <div>
-     <Nav />
+    <div >
       <SearchSection />
     </div>
   )
