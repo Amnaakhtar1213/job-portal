@@ -62,19 +62,19 @@ const Signup = () => {
   </div>
 ) : (
    <div className="">
-    <div className="bg-purple-100 flex flex-col items-center justify-center h-screen">
-        <h1 className="text-purple-700 font-bold text-4xl">Create Your Account</h1> 
-        <p className="text-gray-600 tracking-wide text-lg mt-4">Join NEXORA and find your future</p>
+    <div className="bg-purple-100 flex flex-col items-center justify-center min-h-screen pt-10 md:pt-20">
+        <h1 className="text-purple-700 font-bold text-2xl md:text-4xl">Create Your Account</h1> 
+        <p className="text-gray-600 tracking-wide text-base md:text-lg mt-2 md:mt-4">Join NEXORA and find your future</p>
 
   <form onSubmit={handleSubmit} 
-     className="bg-white p-6 mt-8 rounded-2xl shadow-xl shadow-purple-300">
+     className="bg-white mt-8 p-6 rounded-2xl shadow-xl shadow-purple-300">
       <div className="flex flex-col">
         <label className="text-purple-700 text-lg">Full Name</label>
         <input type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}
          placeholder="Enter Your full name" 
-        className="outline-none border border-purple-200 px-2 py-1 rounded-xl hover:shadow-lg hover:shadow-purple-200 mt-2 placeholder:text-gray-300 cursor-pointer  w-lg"/> 
+        className="outline-none border border-purple-200 px-2 py-1 rounded-xl hover:shadow-lg hover:shadow-purple-200 mt-2 placeholder:text-gray-300 cursor-pointer"/> 
       </div> 
        <div className="flex flex-col">
         <label className="text-purple-700 text-lg mt-2">E-mail</label>
@@ -104,7 +104,7 @@ const Signup = () => {
         <button type="submit" className="bg-purple-700 text-white font-bold px-4 py-2 text-lg rounded-xl hover:-translate-y-2 transition-all duration-200 hover:shadow-lg hover:shadow-purple-400">Sign Up</button> 
       <p className="text-gray-500 text-center mt-4">Already have an account?</p>  
        <button type="button"
-       onClick={() => navigate("/loggin")}className="bg-indigo-700 text-white text-xl px-4 py-1 rounded-xl font-semibold mt-6 hover:scale-120 transition-all hover:shadow-lg hover:shadow-indigo-400 ">Login</button> 
+       onClick={() => navigate("/loggin")}className="bg-white text-indigo-700 text-xl border border-indigo-700 px-4 py-1 rounded-xl font-semibold mt-6 hover:scale-120 transition-all hover:shadow-lg hover:shadow-indigo-400 ">Login</button> 
       </div>
       </form>
 

@@ -60,7 +60,7 @@ const handleLogout = () => {
         <div className="md:flex items-center gap-4">
     <Link
       to="/loggin"
-      className="text-blue-700 border px-6 rounded-xl py-1 hover:bg-blue-700 hover:text-white"
+      className="text-blue-700 border px-6 rounded-xl py-1 hover:bg-blue-700 hover:text-white mr-4"
     >
       Login
     </Link>
