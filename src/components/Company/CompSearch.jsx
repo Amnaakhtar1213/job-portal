@@ -1,22 +1,21 @@
 import React, { useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
 
-const CompSearch = () => {
-   const [search, setSearch] = useState("")
 
-   const [searchParam, setSearchParam] = useSearchParams("")
+const CompSearch = ({setSearch}) => {
+   const [inputSearch, setInputSearch] = useState("")
+
 
    const handleSearch = (e) => {
     e.preventDefault()
-     setSearchParam({search})
+      setSearch(inputSearch)
    }
   return (
     <div>
       <div className="flex justify-center gap-4 mt-8 px-4">
          <div className="relative">
            <input 
-           value={search}
-           onChange={(e) => setSearch(e.target.value)}
+           value={inputSearch}
+           onChange={(e) => setInputSearch(e.target.value)}
         type="text"
          placeholder="Search companies..." 
         className=" w-full md:w-4xl border border-indigo-200 rounded px-8 py-1 hover:border-indigo-300 hover:shadow-indigo-400 hover:shadow focus:outline-none"/> 

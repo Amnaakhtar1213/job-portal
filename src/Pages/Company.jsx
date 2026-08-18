@@ -15,7 +15,7 @@ const Company = () => {
      <div className="p-10">
       <CompHero />
       <CompSearch setSearch={setSearch}/>
-      <FeaturedComp />
+      <FeaturedComp search={search}/>
       <CompCTA />
       
     </div>

@@ -264,6 +264,266 @@ const jobs = [
     whyJoinUs:
       "Work in a fast-paced technology environment and help create digital experiences for millions of users.",
   },
+  {
+  id: 7,
+  company: "Meta",
+  title: "Frontend Developer",
+  category: "Frontend Development",
+  location: "Menlo Park, California, USA",
+  type: "Full Time",
+  Experience: "2 Years",
+  workType: "Hybrid",
+  salary: "$90k–$130k",
+  salaryMin: 90,
+  salaryMax: 130,
+  skills: ["JavaScript", "React", "TypeScript"],
+  posted: "3 Days ago",
+  deadline: "Sep 18",
+  openPositions: 75,
+
+  description:
+    "Meta is looking for a Frontend Developer to create scalable and engaging web experiences used by millions of people around the world.",
+
+  responsibilities: [
+    "Develop responsive and accessible web applications.",
+    "Build reusable and maintainable frontend components.",
+    "Collaborate with designers and backend developers.",
+    "Optimize applications for performance and scalability.",
+    "Debug and resolve frontend issues.",
+  ],
+
+  requirements: [
+    "Strong knowledge of JavaScript.",
+    "Experience with React.",
+    "Understanding of TypeScript is preferred.",
+    "Good understanding of responsive web development.",
+  ],
+
+  qualifications: [
+    "Degree in Computer Science or related field.",
+    "Experience building modern web applications.",
+  ],
+
+  whyJoinUs:
+    "Join a global technology company and build products that connect billions of people while working with talented engineers and designers.",
+},
+{
+  id: 8,
+  company: "Apple",
+  title: "Software Engineer",
+  category: "Software Development",
+  location: "Cupertino, California, USA",
+  type: "Full Time",
+  Experience: "2 Years",
+  workType: "Onsite",
+  salary: "$100k–$145k",
+  salaryMin: 100,
+  salaryMax: 145,
+  skills: ["Swift", "JavaScript", "React"],
+  posted: "5 Days ago",
+  deadline: "Sep 22",
+  openPositions: 80,
+
+  description:
+    "Apple is looking for a Software Engineer to develop innovative software solutions and create seamless experiences across its products and services.",
+
+  responsibilities: [
+    "Design and develop high-quality software applications.",
+    "Write clean and maintainable code.",
+    "Collaborate with engineers and product teams.",
+    "Test, debug, and improve software performance.",
+    "Participate in software development and code reviews.",
+  ],
+
+  requirements: [
+    "Strong programming fundamentals.",
+    "Experience with software development.",
+    "Knowledge of JavaScript or Swift.",
+    "Understanding of data structures and algorithms.",
+  ],
+
+  qualifications: [
+    "Degree in Computer Science or related field.",
+    "Experience developing software applications.",
+  ],
+
+  whyJoinUs:
+    "Work alongside talented engineers and help build products that combine technology, creativity, and exceptional user experiences.",
+},
+{
+  id: 9,
+  company: "Netflix",
+  title: "Frontend Software Engineer",
+  category: "Frontend Development",
+  location: "Los Gatos, California, USA",
+  type: "Full Time",
+  Experience: "3 Years",
+  workType: "Hybrid",
+  salary: "$95k–$135k",
+  salaryMin: 95,
+  salaryMax: 135,
+  skills: ["React", "JavaScript", "TypeScript"],
+  posted: "2 Days ago",
+  deadline: "Sep 20",
+  openPositions: 70,
+
+  description:
+    "Netflix is looking for a Frontend Software Engineer to build engaging, scalable, and high-performance web experiences used by millions of members around the world.",
+
+  responsibilities: [
+    "Develop responsive and high-performance web applications.",
+    "Build reusable and maintainable frontend components.",
+    "Collaborate with designers, product managers, and backend engineers.",
+    "Improve application performance and user experience.",
+    "Participate in code reviews and technical discussions.",
+  ],
+
+  requirements: [
+    "Strong knowledge of JavaScript and React.",
+    "Experience with TypeScript.",
+    "Good understanding of responsive web development.",
+    "Experience working with REST APIs.",
+    "Strong problem-solving and communication skills.",
+  ],
+
+  qualifications: [
+    "Bachelor's degree in Computer Science or related field.",
+    "2+ years of frontend development experience.",
+    "Experience with modern frontend frameworks.",
+  ],
+
+  whyJoinUs:
+    "Join Netflix and work with talented engineers to build innovative digital experiences that entertain millions of users around the world.",
+},
+{
+  id: 10,
+  company: "Tesla",
+  title: "Frontend Software Engineer",
+  category: "Software Development",
+  location: "Austin, Texas, USA",
+  type: "Full Time",
+  Experience: "2 Years",
+  workType: "On-site",
+  salary: "$95k–$140k",
+  salaryMin: 95,
+  salaryMax: 140,
+  skills: ["React", "JavaScript", "TypeScript"],
+  posted: "2 Days ago",
+  deadline: "Sep 25",
+  openPositions: 65,
+
+  description:
+    "Tesla is looking for a Frontend Software Engineer to build modern and responsive software experiences for its technology platforms.",
+
+  responsibilities: [
+    "Develop responsive frontend applications.",
+    "Build reusable React components.",
+    "Collaborate with designers and backend engineers.",
+    "Improve application performance and usability.",
+    "Participate in code reviews and technical discussions.",
+  ],
+
+  requirements: [
+    "Strong knowledge of JavaScript and React.",
+    "Experience with TypeScript.",
+    "Understanding of responsive web development.",
+    "Experience working with APIs.",
+  ],
+
+  qualifications: [
+    "Bachelor's degree in Computer Science or related field.",
+    "2+ years of software development experience.",
+  ],
+
+  whyJoinUs:
+    "Work with an innovative technology team and contribute to software experiences used across Tesla's rapidly growing technology ecosystem.",
+},
+{
+  id: 11,
+  company: "Spotify",
+  title: "Frontend Developer",
+  category: "Frontend Development",
+  location: "Stockholm, Sweden",
+  type: "Full Time",
+  Experience: "2 Years",
+  workType: "Remote",
+  salary: "$80k–$120k",
+  salaryMin: 80,
+  salaryMax: 120,
+  skills: ["React", "TypeScript", "JavaScript"],
+  posted: "2 Days ago",
+  deadline: "Oct 5",
+  openPositions: 50,
+
+  description:
+    "Spotify is looking for a Frontend Developer to build engaging web experiences for music listeners around the world.",
+
+  responsibilities: [
+    "Build responsive web applications.",
+    "Develop reusable React components.",
+    "Collaborate with designers and product teams.",
+    "Improve frontend performance.",
+    "Write clean and maintainable code.",
+  ],
+
+  requirements: [
+    "Strong knowledge of React.",
+    "Experience with JavaScript and TypeScript.",
+    "Understanding of responsive design.",
+    "Experience working with APIs.",
+  ],
+
+  qualifications: [
+    "Degree in Computer Science or related field.",
+    "Experience building frontend applications.",
+  ],
+
+  whyJoinUs:
+    "Join a creative engineering team and help shape digital experiences enjoyed by millions of music fans worldwide.",
+},
+{
+  id: 12,
+  company: "LinkedIn",
+  title: "Frontend Engineer",
+  category: "Frontend Development",
+  location: "Sunnyvale, California, USA",
+  type: "Full Time",
+  Experience: "2 Years",
+  workType: "Hybrid",
+  salary: "$95k–$135k",
+  salaryMin: 95,
+  salaryMax: 135,
+  skills: ["React", "JavaScript", "TypeScript"],
+  posted: "3 Days ago",
+  deadline: "Oct 8",
+  openPositions: 40,
+
+  description:
+    "LinkedIn is looking for a Frontend Engineer to build professional networking experiences used by millions of members worldwide.",
+
+  responsibilities: [
+    "Develop scalable frontend applications.",
+    "Build reusable and accessible UI components.",
+    "Collaborate with designers and product managers.",
+    "Optimize frontend performance.",
+    "Participate in code reviews.",
+  ],
+
+  requirements: [
+    "Strong JavaScript and React skills.",
+    "Experience with TypeScript.",
+    "Understanding of frontend architecture.",
+    "Knowledge of responsive web development.",
+  ],
+
+  qualifications: [
+    "Bachelor's degree in Computer Science or related field.",
+    "2+ years of frontend development experience.",
+  ],
+
+  whyJoinUs:
+    "Build technology that helps professionals connect, learn, and discover opportunities around the world.",
+},
 ];
 
 

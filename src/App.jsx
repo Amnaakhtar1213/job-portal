@@ -13,6 +13,7 @@ import Company from './Pages/Company.jsx';
 import About from './Pages/About.jsx';
 import Navbar from './components/Navbar/Navbar.jsx';
 import Nav from './components/Nav/Nav.jsx';
+import Companies from './Pages/Companies.jsx';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
      <Route path="/saved-jobs" element={<SavedJobs />}></Route>
       <Route path="/company" element={<Company />}></Route>
         <Route path="/about" element={<About />}></Route>
+         <Route path="/companies" element={<Companies />}></Route>
 
   </Routes>
     <Footer /> 

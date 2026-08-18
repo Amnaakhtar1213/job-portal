@@ -16,7 +16,8 @@ const CompCard = ({company}) => {
           <h2 className="text-gray-500">{company.rating}</h2>
         </div>
         <h3 className="text-gray-700 mt-2">{company.openPosition}</h3>
-        <button onClick={() => navigate('/jobs')} 
+        <button onClick={() => 
+        navigate(`/jobs?company=${company.name}`)} 
         className="group bg-indigo-700 text-white px-4 py-1 rounded-xl mt-6 hover:shadow-xl hover:shadow-indigo-300 cursor-pointer">View Jobs <i className="fa-solid fa-arrow-right ml-2 group-hover:animate-[leftRight_2s_ease-in-out_infinite]"></i></button>
       </div>
     </div>

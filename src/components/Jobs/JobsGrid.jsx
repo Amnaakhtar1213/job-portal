@@ -8,10 +8,11 @@ const JobsGrid = ({location, category, jobType, experience, salaryRange, sortBy}
 
   const [searchParam] = useSearchParams()
   const search = searchParam.get("search")
+  const company = searchParam.get("company")
 
     const filteredJobs = jobs.filter((job) => {
 
-      const matchesSearch = !search || job.title.toLowerCase().includes(search.toLowerCase()) ||  job.skills.some((skill) => 
+      const matchesSearch = !search || job.company.toLowerCase().includes(search.toLowerCase()) || job.title.toLowerCase().includes(search.toLowerCase()) ||  job.skills.some((skill) => 
            skill.toLowerCase().includes(search.toLowerCase())
         )
         const matchesCategory = !category || job.category === category
@@ -21,6 +22,9 @@ const JobsGrid = ({location, category, jobType, experience, salaryRange, sortBy}
         const matchesExperience = !experience || job.Experience === experience
 
         const matchesLocation = !location || job.location.includes(location)
+
+        const matchesCompany = 
+        !company || job.company === company
 
        let matchesSalary = true
         
@@ -40,7 +44,10 @@ if (salaryRange === "120+") {
   matchesSalary = job.salaryMax >= 120
 }
 
-        return matchesSearch && matchesLocation && matchesCategory && matchesJobType && matchesExperience && matchesSalary
+
+        return matchesSearch && matchesLocation && matchesCategory && matchesJobType && 
+        matchesCompany &&
+        matchesExperience && matchesSalary
       })
 
   const sortedJobs = [...filteredJobs]
