@@ -67,9 +67,6 @@ const JobsCard = ({job}) => {
     {job.salary}
   </span>
 
-  {/* <span className="hover:-translate-y-1 transition-all duration-300 px-3 py-1 text-sm bg-gray-200 text-gray-700 rounded-full">
-    {job.skills}
-  </span> */}
 
 <div className="flex flex-row gap-4 mt-2 flex-wrap">
        {job.skills.map((skill) => {

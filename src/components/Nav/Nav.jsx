@@ -41,7 +41,7 @@ const handleLogout = () => {
  {currentUser ? (
    <div className=" md:flex items-center justify-center gap-4 md:gap-10">
 
-<span className="md:hidden lg:hidden text-purple-700 font-bold text-xl mr-4">{currentUser.name}</span>
+<span className="md:hidden text-purple-700 font-bold text-xl mr-4">{currentUser.name}</span>
 
  <span className="hidden md:flex text-gray-500 font-semibold items-center">
   Welcome,{" "}
@@ -74,31 +74,7 @@ const handleLogout = () => {
         </div>
       </nav>
       {isMenuOpen && (
-      // <div className="md:hidden bg-white shadow-lg px-6 py-5">
-
-      //   <div className="flex flex-col gap-5">
-
-      //     <Link to="/" className="text-gray-700">
-      //       Home
-      //     </Link>
-
-      //     <Link to="/jobs" className="text-gray-700">
-      //       Jobs
-      //     </Link>
-
-      //     <Link to="/company" className="text-gray-700">
-      //       Companies
-      //     </Link>
-
-      //     <Link to="/about" className="text-gray-700">
-      //       About
-      //     </Link>
-
-      //   </div>
-
-      // </div>
-
-       <div className="md:hidden flex flex-col justify-between pl-6 pt-2 gap-4 md:gap-24 text-gray-700 bg-gray-100 pb-4">
+       <div className="md:hidden flex flex-col justify-between pl-6 pt-10 gap-4 md:gap-24 text-gray-700 bg-gray-100 pb-4">
           <Link to="/" className="hover:text-blue-700 transition-all duration-300 hover:underline">Home</Link>
           <Link to="/jobs" className="hover:text-blue-700 transition-all duration-300 hover:underline">Jobs</Link>
           <Link to="/company" className="hover:text-blue-700 transition-all duration-300 hover:underline">Companies</Link>

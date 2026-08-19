@@ -19,6 +19,10 @@ const CompCard = ({company}) => {
         <button onClick={() => 
         navigate(`/jobs?company=${company.name}`)} 
         className="group bg-indigo-700 text-white px-4 py-1 rounded-xl mt-6 hover:shadow-xl hover:shadow-indigo-300 cursor-pointer">View Jobs <i className="fa-solid fa-arrow-right ml-2 group-hover:animate-[leftRight_2s_ease-in-out_infinite]"></i></button>
+        <button 
+        // onClick={() => 
+        // navigate(`/companies/${company.id}`)} 
+        className="group bg-white text-indigo-700 border border-indigo-700 px-4 py-1 rounded-xl mt-6 hover:shadow-xl hover:shadow-indigo-300 cursor-pointer">View Company <i className="fa-solid fa-arrow-right ml-2 group-hover:animate-[leftRight_2s_ease-in-out_infinite]"></i></button>
       </div>
     </div>
   )

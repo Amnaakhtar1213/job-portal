@@ -10,7 +10,7 @@ import Nav from '../components/Nav/Nav'
 const About = () => {
   return (
     <div className=" bg-purple-100">
-     <div className="p-6 md:p-16">
+     <div className="p-24 md:p-24">
        <AboutHead />
       <AboutMission />
       <AboutState />
