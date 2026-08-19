@@ -59,7 +59,7 @@ const JobsCard = ({job}) => {
     {job.type}
   </span>
 
-  <span className="hover:-translate-y-1 transition-all duration-300px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">
+  <span className="hover:-translate-y-1 transition-all duration-300 px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full">
   {job.workType}
   </span>
 

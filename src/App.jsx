@@ -34,7 +34,7 @@ function App() {
       <Route path="/company" element={<Company />}></Route>
         <Route path="/about" element={<About />}></Route>
          <Route path="/companies" element={<Companies />}></Route>
-          <Route path="/company-detail" element={<CompanyDetail />}></Route>
+          <Route path="/company-detail/:id" element={<CompanyDetail />}></Route>
 
   </Routes>
     <Footer /> 
