@@ -7,7 +7,7 @@ const companies = [
      logo: "https://logo.clearbit.com/google.com",
     location: "Mountain View, California",
     industry: "Technology",
-    companySize: "180,000+ employees",
+    companySize: "180,000+",
     founded: 1998,
     website: "https://www.google.com",
     description:
@@ -33,7 +33,7 @@ const companies = [
      logo: "https://logo.clearbit.com/microsoft.com",
     location: "Redmond, Washington",
     industry: "Software & Technology",
-    companySize: "220,000+ employees",
+    companySize: "220,000+ ",
     founded: 1975,
     website: "https://www.microsoft.com",
     description:
@@ -59,7 +59,7 @@ const companies = [
      logo: "https://logo.clearbit.com/amazon.com",
     location: "Seattle, Washington",
     industry: "E-Commerce & Technology",
-    companySize: "1,500,000+ employees",
+    companySize: "1,500,000+",
     founded: 1994,
     website: "https://www.amazon.com",
     description:
@@ -85,7 +85,7 @@ const companies = [
     openPositions: 90,
     location: "Suwon, South Korea",
     industry: "Electronics & Technology",
-    companySize: "260,000+ employees",
+    companySize: "260,000+",
     founded: 1938,
     website: "https://www.samsung.com",
     description:
@@ -111,7 +111,7 @@ const companies = [
     openPositions: 60,
     location: "Seongnam, South Korea",
     industry: "Internet & Technology",
-    companySize: "4,000+ employees",
+    companySize: "4,000+",
     founded: 1999,
     website: "https://www.naver.com",
     description:
@@ -137,7 +137,7 @@ const companies = [
     openPositions: 90,
     location: "Seoul, South Korea",
     industry: "E-Commerce & Technology",
-    companySize: "100,000+ employees",
+    companySize: "100,000+",
     founded: 2010,
     website: "https://www.coupang.com",
     description:
@@ -163,7 +163,7 @@ const companies = [
     openPositions: 75,
     location: "Menlo Park, California",
     industry: "Social Media & Technology",
-    companySize: "70,000+ employees",
+    companySize: "70,000+",
     founded: 2004,
     website: "https://www.meta.com",
     description:
@@ -189,7 +189,7 @@ const companies = [
     openPositions: 80,
     location: "Cupertino, California",
     industry: "Consumer Technology",
-    companySize: "160,000+ employees",
+    companySize: "160,000+",
     founded: 1976,
     website: "https://www.apple.com",
     description:
@@ -215,7 +215,7 @@ const companies = [
     openPositions: 70,
     location: "Los Gatos, California",
     industry: "Entertainment & Technology",
-    companySize: "14,000+ employees",
+    companySize: "14,000+",
     founded: 1997,
     website: "https://www.netflix.com",
     description:
@@ -241,7 +241,7 @@ const companies = [
     openPositions: 65,
     location: "Austin, Texas",
     industry: "Automotive & Technology",
-    companySize: "125,000+ employees",
+    companySize: "125,000+",
     founded: 2003,
     website: "https://www.tesla.com",
     description:
@@ -267,7 +267,7 @@ const companies = [
     openPositions: 50,
     location: "Stockholm, Sweden",
     industry: "Music & Technology",
-    companySize: "9,000+ employees",
+    companySize: "9,000+ ",
     founded: 2006,
     website: "https://www.spotify.com",
     description:
@@ -293,7 +293,7 @@ const companies = [
     openPositions: 40,
     location: "Sunnyvale, California",
     industry: "Professional Networking & Technology",
-    companySize: "20,000+ employees",
+    companySize: "20,000+",
     founded: 2003,
     website: "https://www.linkedin.com",
     description:

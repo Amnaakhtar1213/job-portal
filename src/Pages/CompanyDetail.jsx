@@ -14,18 +14,17 @@ const CompanyDetail = () => {
   const {id} = useParams()
   const company = companies.find((company) => company.id === Number(id))
 
-  console.log("helloo")
-  console.log("URL ID:", id)
+
 
   return (
     <div className="bg-purple-100 p-24">
       <DetailHead company={company}/>
-      <ComAbout />
-      <ComOverview />
-      <ComJobs />
-      <Benefit />
-      <WorkCulture />
-      <SimilarCom />
+      <ComAbout company={company}/>
+      <ComOverview company={company}/>
+      <ComJobs company={company}/>
+      <Benefit company={company}/>
+      <WorkCulture company={company} />
+      <SimilarCom company={company}/>
     </div>
   )
 }

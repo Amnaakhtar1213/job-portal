@@ -20,7 +20,7 @@ const SavedJobsHead = ({savedJobs}) => {
     Jobs you've saved to apply for later.
   </p>
 
-  <h3 className="text-purple-600 mt-5 font-semibold">
+  <h3 className="text-blue-700 mt-5 font-semibold text-xl">
     {savedJobs.length} {savedJobs.length === 1 ? "job" : "jobs"} saved
   </h3>
 

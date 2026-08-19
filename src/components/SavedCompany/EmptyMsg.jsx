@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+Link
 
-const EmptySavedJobs = () => {
+const EmptyMsg = () => {
   return (
-
+   
     <div className="relative min-h-[70vh] w-full overflow-hidden rounded-3xl flex items-center justify-center px-6 py-16">
 
   {/* Background blobs */}
@@ -21,12 +22,12 @@ const EmptySavedJobs = () => {
 
     {/* Heading */}
     <h2 className="text-2xl font-bold text-indigo-700">
-      No Saved Jobs Yet
+      No Saved  Companies Yet
     </h2>
 
     {/* Description */}
     <p className="text-gray-500 mt-3 leading-relaxed">
-      You haven't saved any jobs yet.
+      You haven't saved companies yet.
       <br />
       Start exploring opportunities and save the ones
       <br />
@@ -35,13 +36,13 @@ const EmptySavedJobs = () => {
 
     {/* Button */}
     <Link
-      to="/jobs"
+      to="/company"
       className="inline-block mt-8 bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold
       hover:bg-indigo-700 hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-200
       transition-all duration-300"
     >
       <i className="fa-solid fa-magnifying-glass mr-2"></i>
-      Browse Jobs
+      Browse Companies
     </Link>
 
   </div>
@@ -50,4 +51,4 @@ const EmptySavedJobs = () => {
   )
 }
 
-export default EmptySavedJobs
+export default EmptyMsg
