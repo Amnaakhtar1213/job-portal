@@ -2,7 +2,7 @@ import React from 'react'
 
 const Requirment = ({job}) => {
   return (
-    <div className="max-w-7xl mx-auto bg-white border border-blue-200 rounded-3xl p-8 shadow-sm mt-6">
+    <div className="max-w-7xl mx-auto bg-white border border-blue-200 rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300 shadow-lg shadow-blue-300 mt-6">
      <h2 className="text-blue-700 text-4xl font-bold text-center">Requirment</h2>
      <div className="space-y-3 mt-4">
       {job.requirements.map((item, idx) => {

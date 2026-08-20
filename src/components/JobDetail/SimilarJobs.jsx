@@ -20,7 +20,7 @@ const SimilarJobs = ({ job }) => {
         {similarJobs.map((item) => (
           <div
             key={item.id}
-            className="border border-gray-200 rounded-2xl p-5"
+            className="border border-gray-300 shadow-lg shadow-blue-300 rounded-2xl p-5 hover:-translate-y-2 transition-all duration-300"
           >
             <h3 className="text-xl font-semibold text-gray-900">
               {item.title}

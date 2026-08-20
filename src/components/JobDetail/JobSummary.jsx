@@ -2,7 +2,7 @@ import React from 'react'
 
 const JobSummary = ({job}) => {
   return (
-    <div className="max-w-7xl mx-auto border border-blue-300 rounded-3xl p-8 shadow-sm shadow-blue-200 flex flex-col gap-6">
+    <div className="max-w-7xl mx-auto border border-blue-300 rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300 shadow-lg shadow-blue-300 flex flex-col gap-6">
       <h1 className="text-blue-700 font-bold text-3xl text-center ">JOB SUMMARY</h1>
       <div className="grid grid-cols-3 gap-6">
         <div className="flex flex-col gap-2 p-2 ">

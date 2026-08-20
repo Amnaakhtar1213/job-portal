@@ -27,7 +27,9 @@ const Application = () => {
       edu: edu,
       experience: experience,
       skills: skills,
-      cv: cv
+      cv: cv,
+      status: "Applied",
+      appliedDate: new Date().toLocaleDateString()
     }
     const existingApplications = JSON.parse(localStorage.getItem("applicationData")) || []
 

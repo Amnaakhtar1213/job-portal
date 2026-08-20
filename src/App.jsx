@@ -15,6 +15,7 @@ import Navbar from './components/Navbar/Navbar.jsx';
 import Nav from './components/Nav/Nav.jsx';
 import Companies from './Pages/Companies.jsx';
 import CompanyDetail from './Pages/CompanyDetail.jsx';
+import MyApplications from './Pages/MyApplications.jsx';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path="/about" element={<About />}></Route>
          <Route path="/companies" element={<Companies />}></Route>
           <Route path="/company-detail/:id" element={<CompanyDetail />}></Route>
+           <Route path="/my-applications" element={<MyApplications />}></Route>
 
   </Routes>
     <Footer /> 

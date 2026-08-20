@@ -39,12 +39,12 @@ const savedJobs = JSON.parse(localStorage.getItem("savedJobs")) || []
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-10">
-      <div className="w-full mx-auto flex flex-row items-start justify-between gap-8 p-8 shadow shadow-blue-300">
+      <div className="w-full mx-auto flex flex-row items-start justify-between gap-8 p-8 hover:-translate-y-2 transition-all duration-300 shadow-lg shadow-blue-300">
         <div className="w-3/4 flex flex-row gap-20 items-start p-8 ">
-          <div className="bg-blue-200 w-8 h-8 items-center flex justify-center rounded-full text-blue-500 font-bold">NX</div>
+          <div className="bg-blue-200 w-12 h-12 items-center flex justify-center rounded-full text-blue-500 font-bold text-2xl">{job.company.charAt(0)}</div>
           <div className="">
             <h2 className="text-gray-900 font-bold text-3xl">{job.title}</h2>
-            <h1 className="text-blue-700 text-xl font-semibold mt-2">NEXORA</h1>
+            <h1 className="text-blue-700 text-xl font-semibold mt-2">{job.company}</h1>
             <div className="flex gap-2">
               <div>
                 <i className="fa-solid fa-location-dot text-red-600"></i>

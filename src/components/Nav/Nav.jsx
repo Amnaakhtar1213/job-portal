@@ -39,7 +39,7 @@ const handleLogout = () => {
         <div className="flex flex-row justify-between gap-6 items-center">
 
  {currentUser ? (
-   <div className=" md:flex items-center justify-center gap-4 md:gap-10">
+   <div className=" md:flex items-center justify-center gap-4 md:gap-4">
 
 <span className="md:hidden text-purple-700 font-bold text-xl mr-4">{currentUser.name}</span>
 
@@ -49,6 +49,7 @@ const handleLogout = () => {
     {currentUser.name}
   </span>
 </span>  
+<Link to="/my-applications" className="hidden md:flex bg-white text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white px-4 py-1 rounded-xl">My Applications</Link>
 
      <button className="hidden md:flex bg-blue-700 text-white px-4 py-1 rounded-xl " onClick={handleLogout}>Logout</button>
 
@@ -82,7 +83,10 @@ const handleLogout = () => {
           <Link to="/saved-jobs" className="hover:text-blue-700 transition-all duration-300 hover:underline">
        Saved Jobs
     </Link>
-          <button className="bg-blue-700 text-white px-4 py-1 rounded-xl mr-6 " onClick={handleLogout}>Logout</button>
+    <Link to="/my-applications" className="hover:text-blue-700 transition-all duration-300 hover:underline">
+       My Applications
+    </Link>
+          <Link className="hover:text-blue-700 transition-all duration-300 hover:underline" onClick={handleLogout}>Logout</Link>
         </div>
     )}
     </div>
