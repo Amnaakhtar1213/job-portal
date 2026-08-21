@@ -82,6 +82,12 @@ The project focuses on creating a complete and practical job-seeking experience 
 
 - [CLICK HERE FOR EXPERIENCE NEXORA YOURSELF]()
 
+-----------------------------------
+
+## Clone the Repository
+```bash
+git clone https://github.com/Amnaakhtar1213/job-portal.git
+
 
 
 
