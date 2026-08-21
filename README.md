@@ -38,3 +38,50 @@ The project focuses on creating a complete and practical job-seeking experience 
 
 ###  Home Page
 ![NEXORA Home Page](./src/assets/home.png)
+
+###  About Page
+![NEXORA About Page](./src/assets/about.png)
+
+###  Jobs Page
+![NEXORA Jobs Page](./src/assets/jobs.png)
+
+###  Job-Details Page
+![NEXORA Job-details Page](./src/assets/jobDetails.png)
+
+###  Login Page
+![NEXORA Login Page](./src/assets/login.png)
+
+###  Signup Page
+![NEXORA Signup Page](./src/assets/signup.png)
+
+###  Companies Page
+![NEXORA Home Page](./src/assets/companies.png)
+
+###  Company-details Page
+![NEXORA Company-details Page](./src/assets/compDetail.png)
+
+###  Popular-Category Page
+![NEXORA Popular-Category Page](./src/assets/popularCateg.png)
+
+###  Save-Jobs Page
+![NEXORA Save Page](./src/assets/saveJobs.png)
+
+###  My-Applications Page
+![NEXORA My-Applications Page](./src/applicatios/my.png)
+
+###  How-it-Works Page
+![NEXORA How-it-Works Page](./src/assets/howWork.png)
+
+###  Application Page
+![NEXORA Application Page](./src/assets/home.png)
+
+###  Save-Company Page
+![NEXORA Save Page](./src/assets/saveComp.png)
+
+###  Job-Apply-Application Page
+![NEXORA Save Page](./src/assets/applyJobApplic.png)
+
+
+
+
+

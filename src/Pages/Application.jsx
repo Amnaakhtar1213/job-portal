@@ -56,7 +56,7 @@ setIsSubmitted(true)
     </div>
   
   ) : (
-     <div className="bg-blue-100 px-24 py-10">
+     <div className="bg-blue-100 px-24 py-20">
       <h1 className="text-blue-700 font-bold text-5xl text-center">NEXORA</h1>
        <p className="text-gray-400 text-center text-lg mt-2">  Job Application</p>
        <h3 className="text-gray-700 text-xl mt-4">Apply for this position</h3>
