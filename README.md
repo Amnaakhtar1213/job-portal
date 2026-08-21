@@ -37,4 +37,4 @@ The project focuses on creating a complete and practical job-seeking experience 
 ## Screenshots 📸
 
 ###  Home Page
-    [NEXORA Home Page](./src/assets/home.png)
+![NEXORA Home Page](./src/assets/home.png)
