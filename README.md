@@ -8,16 +8,16 @@ The project focuses on creating a complete and practical job-seeking experience 
 
 ##  Features ✨
 
-* 🔍 **Job Search & Filtering** — Search jobs and filter them by location, category, job type, experience, and  salary.
-* 📄 **Job Details** — View complete job information, including requirements, responsibilities, benefits, salary, and company details.
-* 🔐 **User Authentication** — Sign up and log in to access application features.
-* 📝 **Job Application** — Apply for jobs through a dedicated application form and submit a CV.
-* 📋 **My Applications** — View all applied jobs in one place.
-* 💾 **Save Jobs** — Save interesting jobs and manage them from the Saved Jobs page.
-* ❤️ **Save Companies** — Save companies for easy access later.
-* 🏢 **Company Profiles** — Explore company information, available jobs, benefits, and work culture.
-* ✓ **Applied Status** — Easily identify jobs that have already been applied for.
-* 📱 **Responsive Design** — Responsive interface designed for a smooth experience across different screen sizes.
+- 🔍 **Job Search & Filtering** — Search jobs and filter them by location, category, job type, experience, and  salary.
+- 📄 **Job Details** — View complete job information, including requirements, responsibilities, benefits, salary, and company details.
+- 🔐 **User Authentication** — Sign up and log in to access application features.
+- 📝 **Job Application** — Apply for jobs through a dedicated application form and submit a CV.
+- 📋 **My Applications** — View all applied jobs in one place.
+- 💾 **Save Jobs** — Save interesting jobs and manage them from the Saved Jobs page.
+- ❤️ **Save Companies** — Save companies for easy access later.
+- 🏢 **Company Profiles** — Explore company information, available jobs, benefits, and work culture.
+- ✓ **Applied Status** — Easily identify jobs that have already been applied for.
+- 📱 **Responsive Design** — Responsive interface designed for a smooth experience across different screen sizes.
 
 ------------------------------------
 
@@ -87,7 +87,6 @@ The project focuses on creating a complete and practical job-seeking experience 
 ## Clone the Repository
 ```bash
 git clone https://github.com/Amnaakhtar1213/job-portal.git
-
 
 
 
