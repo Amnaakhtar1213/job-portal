@@ -39,34 +39,37 @@ const handleLogout = () => {
         <div className="flex flex-row justify-between gap-6 items-center">
 
  {currentUser ? (
-   <div className=" md:flex items-center justify-center gap-4 md:gap-4">
+   <div className="flex items-center gap-4 md:gap-6">
 
-<span className="md:hidden text-purple-700 font-bold text-xl mr-4">{currentUser.name}</span>
+<span className=" text-purple-700 font-bold text-xl mr-4">Welcome, {currentUser.name}</span>
 
- <span className="hidden md:flex text-gray-500 font-semibold items-center">
+  {/* <span className=" text-gray-500 font-semibold items-center">
   Welcome,{" "}
   <span className=" text-purple-700 font-bold text-xl ml-4">
     {currentUser.name}
   </span>
-</span>  
-<Link to="/my-applications" className="hidden md:flex bg-white text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white px-4 py-1 rounded-xl">My Applications</Link>
+</span>    */}
 
-     <button className="hidden md:flex bg-blue-700 text-white px-4 py-1 rounded-xl " onClick={handleLogout}>Logout</button>
+<Link to="/my-applications" 
+className=" bg-white text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white px-4 py-1 rounded-xl hidden md:flex lg:flex">My Applications</Link>
 
-     <Link to="/saved-jobs">
-        <i className="hidden md:flex fa-solid fa-heart text-purple-600 hover:scale-120 hover:text-purple-500 transition-all text-xl"></i>
+     <button className="hidden md:flex bg-blue-700 text-white px-4 py-1 rounded-xl "
+      onClick={handleLogout}>Logout</button>
+
+     <Link to="/saved-jobs" className="hidden md:block">
+        <i className=" fa-solid fa-heart text-purple-600 hover:scale-120 hover:text-purple-500 transition-all text-xl"></i>
     </Link>
        </div>
        ) : (
         <div className="md:flex items-center gap-4">
     <Link
       to="/loggin"
-      className="text-blue-700 border px-6 rounded-xl py-1 hover:bg-blue-700 hover:text-white mr-4"
+      className="hidden md:flex text-blue-700 border px-6 rounded-xl py-1 hover:bg-blue-700 hover:text-white mr-4"
     >
       Login
     </Link>
 
-    <Link to="/signup" className="bg-blue-700 text-white px-4 py-1 rounded">
+    <Link to="/signup" className="hidden md:flex bg-blue-700 text-white px-4 py-1 rounded">
       Sign Up
     </Link>
   </div>
@@ -86,7 +89,19 @@ const handleLogout = () => {
     <Link to="/my-applications" className="hover:text-blue-700 transition-all duration-300 hover:underline">
        My Applications
     </Link>
-          <Link className="hover:text-blue-700 transition-all duration-300 hover:underline" onClick={handleLogout}>Logout</Link>
+            <Link
+      to="/loggin"
+      className="hover:text-blue-700 transition-all duration-300 hover:underline"
+    >Login
+    </Link>
+
+    <Link to="/signup" className="hover:text-blue-700 transition-all duration-300 hover:underline">
+      Sign Up
+    </Link>
+
+     <Link className="hover:text-blue-700 transition-all duration-300 hover:underline" onClick={handleLogout}>Logout</Link>
+
+
         </div>
     )}
     </div>

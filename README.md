@@ -32,8 +32,6 @@ The project focuses on creating a complete and practical job-seeking experience 
 
 -------------------------
 
-## How to Run 
-
 ## Screenshots 📸
 
 ###  Home Page
@@ -77,6 +75,12 @@ The project focuses on creating a complete and practical job-seeking experience 
 
 ###  About Page
 ![NEXORA About Page](./src/assets/about.png)
+
+---------------------------------------------
+
+## LIVE DEMO
+
+- [CLICK HERE FOR EXPERIENCE NEXORA YOURSELF]()
 
 
 

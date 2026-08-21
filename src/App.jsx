@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
  import Home from './Pages/Home.jsx'
@@ -22,7 +22,7 @@ import ScrollToTop from './components/ScrollToTop.jsx';
 function App() {
 
   return (
- <BrowserRouter>
+ <BrowserRouter basename="/job-portal">
 
      <ScrollToTop />
       <Nav />
