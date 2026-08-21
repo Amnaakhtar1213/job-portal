@@ -34,7 +34,7 @@ const Loggin = () => {
     }
   }
   return (
-    <div className=" bg-blue-100 flex flex-col items-center justify-center p-34">
+    <div className=" bg-blue-200 flex flex-col items-center justify-center p-34">
       <div className="">
           <h1 className="text-blue-700 text-6xl font-bold">NEXORA</h1>
           <p className="text-gray-500 text-lg text-center mt-2"> Your Road to the Future.  </p>

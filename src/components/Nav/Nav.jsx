@@ -30,10 +30,10 @@ const handleLogout = () => {
         
 
         <div className="hidden md:flex flex-row justify-between items-center gap-4 md:gap-24 text-gray-700">
-          <Link to="/" className="hover:text-blue-700 transition-all duration-300 hover:underline">Home</Link>
-          <Link to="/jobs" className="hover:text-blue-700 transition-all duration-300 hover:underline">Jobs</Link>
-          <Link to="/company" className="hover:text-blue-700 transition-all duration-300 hover:underline">Companies</Link>
-          <Link to="/about" className="hover:text-blue-700 transition-all duration-300 hover:underline">About</Link>
+          <Link to="/" className="hover:text-blue-700 transition-all duration-300 hover:underline font-semibold">Home</Link>
+          <Link to="/jobs" className="hover:text-blue-700 transition-all duration-300 hover:underline font-semibold">Jobs</Link>
+          <Link to="/company" className="hover:text-blue-700 transition-all duration-300 hover:underline font-semibold">Companies</Link>
+          <Link to="/about" className="hover:text-blue-700 transition-all duration-300 hover:underline font-semibold">About</Link>
         </div>
 
         <div className="flex flex-row justify-between gap-6 items-center">
@@ -75,7 +75,7 @@ const handleLogout = () => {
         </div>
       </nav>
       {isMenuOpen && (
-       <div className="md:hidden flex flex-col justify-between pl-6 pt-10 gap-4 md:gap-24 text-gray-700 bg-gray-100 pb-4">
+       <div className="md:hidden flex flex-col justify-between pl-6 pt-10 gap-4 md:gap-24 text-gray-700 bg-white shadow-lg shadow-gray-400 pb-4 fixed top-0 right-0 left-0 z-100 mt-16">
           <Link to="/" className="hover:text-blue-700 transition-all duration-300 hover:underline">Home</Link>
           <Link to="/jobs" className="hover:text-blue-700 transition-all duration-300 hover:underline">Jobs</Link>
           <Link to="/company" className="hover:text-blue-700 transition-all duration-300 hover:underline">Companies</Link>
