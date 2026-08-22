@@ -80,7 +80,7 @@ The project focuses on creating a complete and practical job-seeking experience 
 
 ## LIVE DEMO
 
-- [CLICK HERE FOR EXPERIENCE NEXORA YOURSELF]()
+- [ NEXORA Live-Demo](https://amnaakhtar1213.github.io/job-portal/)
 
 -----------------------------------
 
