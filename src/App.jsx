@@ -22,7 +22,7 @@ import ScrollToTop from './components/ScrollToTop.jsx';
 function App() {
 
   return (
- <BrowserRouter basename="/">
+ <BrowserRouter basename="/job-portal/">
 
      <ScrollToTop />
       <Nav />
